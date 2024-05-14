@@ -20,7 +20,7 @@ The Sparse Matrix's compression rate fully depends on the rate of the recurrent 
 
 ## The Sparse Matrix Data Structure
 
-Each
+Each non-omitted number is stored in a "node"
 
 
 
