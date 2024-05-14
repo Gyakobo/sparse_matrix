@@ -1,0 +1,153 @@
+==24654== Memcheck, a memory error detector
+==24654== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24654== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==24654== Command: ./exe
+==24654== Parent PID: 3894
+==24654== 
+--24654-- 
+--24654-- Valgrind options:
+--24654--    --leak-check=full
+--24654--    --log-file=valgrind.rpt
+--24654--    --show-leak-kinds=all
+--24654--    --track-origins=yes
+--24654--    --verbose
+--24654-- Contents of /proc/version:
+--24654--   Linux version 5.15.90.1-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Jan 27 02:56:13 UTC 2023
+--24654-- 
+--24654-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--24654-- Page sizes: currently 4096, max supported 4096
+--24654-- Valgrind library directory: /usr/libexec/valgrind
+--24654-- Reading syms from /home/andrew/sparse_matrix/exe
+--24654-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--24654--   Considering /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug ..
+--24654--   .. build-id is valid
+--24654-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--24654--    object doesn't have a symbol table
+--24654--    object doesn't have a dynamic symbol table
+--24654-- Scheduler: using generic scheduler lock implementation.
+--24654-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==24654== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-24654-by-andrew-on-???
+==24654== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-24654-by-andrew-on-???
+==24654== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-24654-by-andrew-on-???
+==24654== 
+==24654== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==24654== don't want to do, unless you know exactly what you're doing,
+==24654== or are doing some strange experiment):
+==24654==   /usr/bin/vgdb --pid=24654 ...command...
+==24654== 
+==24654== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==24654==   /path/to/gdb ./exe
+==24654== and then give GDB the following command
+==24654==   target remote | /usr/bin/vgdb --pid=24654
+==24654== --pid is optional if only one valgrind process is running
+==24654== 
+--24654-- REDIR: 0x402aa60 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bcec2 (???)
+--24654-- REDIR: 0x402a830 (ld-linux-x86-64.so.2:index) redirected to 0x580bcedc (???)
+--24654-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--24654--    object doesn't have a symbol table
+--24654-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--24654--    object doesn't have a symbol table
+==24654== WARNING: new redirection conflicts with existing -- ignoring it
+--24654--     old: 0x0402aa60 (strlen              ) R-> (0000.0) 0x580bcec2 ???
+--24654--     new: 0x0402aa60 (strlen              ) R-> (2007.0) 0x0484ee30 strlen
+--24654-- REDIR: 0x4027240 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484fcd0 (strcmp)
+--24654-- REDIR: 0x402afc0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4853840 (mempcpy)
+--24654-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--24654--   Considering /usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug ..
+--24654--   .. build-id is valid
+==24654== WARNING: new redirection conflicts with existing -- ignoring it
+--24654--     old: 0x04905ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--24654--     new: 0x04905ce0 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==24654== WARNING: new redirection conflicts with existing -- ignoring it
+--24654--     old: 0x04905ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--24654--     new: 0x04905ce0 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+==24654== WARNING: new redirection conflicts with existing -- ignoring it
+--24654--     old: 0x04905ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--24654--     new: 0x04905ce0 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==24654== WARNING: new redirection conflicts with existing -- ignoring it
+--24654--     old: 0x04905ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--24654--     new: 0x04905ce0 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+--24654-- REDIR: 0x49087a0 (libc.so.6:strnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908a60 (libc.so.6:strpbrk) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908360 (libc.so.6:strcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4926d50 (libc.so.6:wcsnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909750 (libc.so.6:memset) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49255c0 (libc.so.6:wcslen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909c90 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49253f0 (libc.so.6:wcschr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49082e0 (libc.so.6:index) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49089e0 (libc.so.6:rindex) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909620 (libc.so.6:memmove) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+==24654== Preferring higher priority redirection:
+--24654--     old: 0x04a00940 (__memcpy_avx_unalign) R-> (2018.0) 0x04850f90 __memcpy_avx_unaligned_erms
+--24654--     new: 0x04a00940 (__memcpy_avx_unalign) R-> (2018.1) 0x04852880 memmove
+--24654-- REDIR: 0x4925470 (libc.so.6:wcscmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909a60 (libc.so.6:stpncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4925a30 (libc.so.6:wmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49088b0 (libc.so.6:strncmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909af0 (libc.so.6:strcasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49084a0 (libc.so.6:strcspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49254f0 (libc.so.6:wcscpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908250 (libc.so.6:strcat) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909be0 (libc.so.6:strncasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909500 (libc.so.6:bcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49115f0 (libc.so.6:memrchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x490b090 (libc.so.6:strchrnul) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908410 (libc.so.6:strcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909b90 (libc.so.6:strcasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908720 (libc.so.6:strlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908950 (libc.so.6:strncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49099d0 (libc.so.6:stpcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909470 (libc.so.6:memchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4908b80 (libc.so.6:strspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909850 (libc.so.6:mempcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x4909b40 (libc.so.6:strncasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x490b000 (libc.so.6:rawmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--24654-- REDIR: 0x49fd790 (libc.so.6:__strrchr_avx2) redirected to 0x484e810 (rindex)
+--24654-- REDIR: 0x4905120 (libc.so.6:malloc) redirected to 0x4848820 (malloc)
+--24654-- REDIR: 0x4909040 (libc.so.6:__GI_strstr) redirected to 0x4853ae0 (__strstr_sse2)
+--24654-- REDIR: 0x4905460 (libc.so.6:free) redirected to 0x484b210 (free)
+--24654-- REDIR: 0x49fd580 (libc.so.6:__strchrnul_avx2) redirected to 0x4853330 (strchrnul)
+--24654-- REDIR: 0x4a00900 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4853440 (mempcpy)
+--24654-- REDIR: 0x49fd960 (libc.so.6:__strlen_avx2) redirected to 0x484ed10 (strlen)
+==24654== 
+==24654== HEAP SUMMARY:
+==24654==     in use at exit: 328 bytes in 12 blocks
+==24654==   total heap usage: 18 allocs, 6 frees, 5,992 bytes allocated
+==24654== 
+==24654== Searching for pointers to 12 not-freed blocks
+==24654== Checked 106,144 bytes
+==24654== 
+==24654== 48 bytes in 2 blocks are indirectly lost in loss record 1 of 5
+==24654==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24654==    by 0x10984A: mtrx_alloc (main.c:244)
+==24654==    by 0x10999F: main (main.c:281)
+==24654== 
+==24654== 72 bytes in 3 blocks are indirectly lost in loss record 2 of 5
+==24654==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24654==    by 0x10981B: mtrx_alloc (main.c:238)
+==24654==    by 0x10999F: main (main.c:281)
+==24654== 
+==24654== 160 bytes in 5 blocks are indirectly lost in loss record 3 of 5
+==24654==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24654==    by 0x1097D8: mtrx_alloc (main.c:230)
+==24654==    by 0x10999F: main (main.c:281)
+==24654== 
+==24654== 160 (24 direct, 136 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 5
+==24654==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24654==    by 0x10981B: mtrx_alloc (main.c:238)
+==24654==    by 0x10999F: main (main.c:281)
+==24654== 
+==24654== 168 (24 direct, 144 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 5
+==24654==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24654==    by 0x10984A: mtrx_alloc (main.c:244)
+==24654==    by 0x10999F: main (main.c:281)
+==24654== 
+==24654== LEAK SUMMARY:
+==24654==    definitely lost: 48 bytes in 2 blocks
+==24654==    indirectly lost: 280 bytes in 10 blocks
+==24654==      possibly lost: 0 bytes in 0 blocks
+==24654==    still reachable: 0 bytes in 0 blocks
+==24654==         suppressed: 0 bytes in 0 blocks
+==24654== 
+==24654== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
