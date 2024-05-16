@@ -31,7 +31,7 @@ struct Element {
     struct Element * colElement; // Pointer to next column Element
 };
 ```
-2. Afterwards, after the `Element` object is created, alongside it two more objects are created as well. Here this is where we'd have to utilize pointers and a little bit of our imagination. Using `malloc` we allocate space for (basically create) two `Header` structs, each of which would be pointing to both the aforementioned created element and the next `Header` element. If you haven't noticed already we're creating a table of sorts with specific column and row objects pointing to said element objects.
+2. Afterwards, after the `struct Element` object is created, alongside it two more objects are created as well. Here this is where we'd have to utilize pointers and a little bit of our imagination. Using `void* malloc` we allocate space for (basically create) two `struct Header` structs, each of which would be pointing to both the aforementioned created element and the next `struct Header` element. If you haven't noticed already we're creating a table of sorts with specific column and row objects pointing to said element objects. The `struct Header` objects would also connect to each other using once again pointers `struct Header * header;`
 
 ```c
 struct Header {
@@ -41,7 +41,13 @@ struct Header {
 };
 ```
 
-3. The entire structure can then be saved. 
+3. The entire structure can then be saved by just having two pointers to the column and row headers: 
+```c
+struct Header * headRowHeader;
+struct Header * headColHeader;
+```
+
+The headers in their place would contain the said element structure. We could also add other elements to the `struct Matrix` like number of rows, columns, and the arbitrary recurrent value that would be omitted.
 
 ```c
 struct Matrix {
