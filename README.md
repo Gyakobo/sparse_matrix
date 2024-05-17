@@ -77,4 +77,4 @@ This is a visual representation of how our data structure would ultimately look 
 
 <img src="./assets/sparse_matrix_img.jpg" style="float: left; margin-bottom: 1rem;">
 
-> Note: Assuming the image per say gets bigger or is maximized in its size, then hypothetically the size of the sparse matrix should remain unscaved as the gaps between the relevant values(in our case any number not equal to zero) would technically not increase or decrease. 
+> Note: Assuming the image per say gets bigger or is expanded in its size, then hypothetically the size of the sparse matrix should remain unscaved as only the gaps(numbers equal to zero) between the relevant values(in our case any number not equal to zero) would be prone to change. In simpler terms, if the image is shrunk or expanded the overall information weight remains the same.
