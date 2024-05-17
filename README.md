@@ -8,11 +8,14 @@ This project aims utilize a sparse matrix as form of matrix or image value compr
 
 Giving a sample matrix of numbers:
 
- 0 | 0 | 0 | 0 | 9 | 0 |
----|---|---|---|---|---|
- 0 | 0 | 0 | 0 | 0 | 0 |
- 4 | 0 | 0 | 8 | 0 | 0 |
- 0 | 0 | 2 | 0 | 4 | 0 |
+```
+ 0 | 0 | 0 | 8 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
+---|---|---|---|---|---|---|---|---|---|---|
+ 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 8 |
+ 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+ 0 | 0 | 7 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
+ 0 | 0 | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 8 | 0 |
+```
 
 We immediately notice the overwhelming issue with this matrix that it has too many 0's which don't necessarilly need to use up space hence they could just be left out. 
 
@@ -59,4 +62,19 @@ struct Matrix {
     int fillValue;
 };
 ```
+## Diagram of a sparse matrix
 
+To hearken back to the matrix back in our introduction: 
+```
+ 0 | 0 | 0 | 8 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
+---|---|---|---|---|---|---|---|---|---|---|
+ 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 8 |
+ 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+ 0 | 0 | 7 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
+ 0 | 0 | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 8 | 0 |
+```
+This is a visual representation of how our data structure would ultimately look like: 
+
+<img src="./assets/sparse_matrix_img.jpg" style="float: left; margin-bottom: 1rem;">
+
+> Note: Assuming the image per say gets bigger or is maximized in its size, then hypothetically the size of the sparse matrix should remain unscaved as the gaps between the relevant values(in our case any number not equal to zero) would technically not increase or decrease. 
