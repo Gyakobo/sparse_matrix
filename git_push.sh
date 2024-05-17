@@ -13,4 +13,4 @@ fi
 # Run the command provided by the user
 eval "sudo git add ."
 eval "sudo git commit -m \"$user_command\""
-eval "sudo git push -u -f origin main"
+eval "sudo git push https://github.com/Gyakobo/sparse_matrix.git"
