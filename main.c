@@ -329,7 +329,7 @@ struct Matrix mtrx_alloc(char * filename, int fillValue) {
     return mtrx;
 }
 
-void mtrx_set(struct Matrix *mtrx, int row, int col, int val) {
+/* void mtrx_set(struct Matrix *mtrx, int row, int col, int val) {
     int i;
     int j;
 
@@ -343,7 +343,7 @@ void mtrx_set(struct Matrix *mtrx, int row, int col, int val) {
     for (j=0; j<row-1; ++j) e = e->rowElement;
 
     printf("Element value: %d\n", e->value);
-}
+}*/
 
 /*struct Element* mtrx_get_element(struct Matrix * mtrx, int row, int col) {
     struct Header * colHeader   = mtrx->headColHeader;
@@ -419,9 +419,9 @@ int main() {
 
     /* Print Mtrx contents */
 
-    green_color();
+    /*green_color();
     mtrx_set(&mtrx, 2, 3, 3);  
-    reset_color();
+    reset_color();*/
 
     mtrx_print(&mtrx);
     
