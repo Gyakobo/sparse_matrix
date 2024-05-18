@@ -8,9 +8,11 @@ This project aims utilize a sparse matrix as form of matrix or image value compr
 
 Giving a sample matrix of numbers:
 
+
+<!-- ---|---|---|---|---|---|---|---|---|---|---| -->
+
 ```
  0 | 0 | 0 | 8 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
----|---|---|---|---|---|---|---|---|---|---|
  0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 8 |
  2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
  0 | 0 | 7 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
