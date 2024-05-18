@@ -4,6 +4,13 @@ Author: [Andrew Gyakobo](https://github.com/Gyakobo)
 
 This project aims utilize a sparse matrix as form of matrix or image value compression by basically implementing a special kind of data structure where it basically omits one continuously recurring value ultimately saving space only for "important" variables. 
 
+>[!NOTE]
+>Just a small personal note and a small gag per say, this program is written in clean C and has no errors or warnings. The program was run and precompiled into a `.exe` with the following bash command:
+
+```bash
+$ sudo gcc -ansi -Wpedantic -Wextra -Wall main.c -o exe
+```
+
 ## Introduction
 
 Giving a sample matrix of numbers:
