@@ -28,7 +28,7 @@ The Sparse Matrix's compression rate fully depends on the rate of the recurrent 
 
 ##  Review of the Sparse Matrix Data Structure
 
-1. As the program scans the [txt file](https://github.com/Gyakobo/sparse_matrix/matrix.txt) row by row each non-omitted number is subsequently stored in a sample "node" in a struct called `Element`. Each essential value is then saved in the `value` integer in struct `Element`. The code snippet is as follows:
+1. As the program scans the [txt file](https://github.com/Gyakobo/sparse_matrix/blob/master/matrix.txt) row by row each non-omitted number is subsequently stored in a sample "node" in a struct called `Element`. Each essential value is then saved in the `value` integer in struct `Element`. The code snippet is as follows:
 
 ```c
 struct Element {
