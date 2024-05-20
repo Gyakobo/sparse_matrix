@@ -87,13 +87,13 @@ This is a visual representation of how our data structure would ultimately look 
 
 ## Compression Rates and Analysis
 
-When it comes to compression rates and let's test the program out on the following data:
+When it comes to compression rates let's test the program out on the following data:
 
  1 | 1 |
 ---|---|
  1 | 1 |
 
-`main.c` would then output the following:
+`main.c` would then output the following snippet:
 
 ```shell
 index: 1
@@ -118,3 +118,10 @@ val: 1
 Size of sparse mtrx: 96
 Size of simpler mtrx: 8
 ```
+
+>[!NOTE]
+>The first two indices above the division line indicates the first two columns, whilst the second two indices - the first two rows.
+
+As we can see from the displayed sizes of the sparse matrix and just a normal array the array is uses `16 bytes` and the sparse matrix utilizes `96 bytes`. You might immediately mention that the sparse matrix data structure is not efficient with this example and you'd be definitely right. Let's however take another example into consideration. Below is practically the same data table but skewed to the right:
+
+

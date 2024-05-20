@@ -1,0 +1,22 @@
+[1;31mindex: 1
+[1;33mval: 1
+val: 1
+[0m
+[1;31mindex: 2
+[1;33mval: 1
+val: 1
+[0m
+==========================
+
+[1;31mindex: 1
+[1;33mval: 1
+val: 1
+[0m
+[1;31mindex: 2
+[1;33mval: 1
+val: 1
+[0m
+
+[0;34mSize of sparse mtrx: 96
+[0m[0;34mSize of simpler mtrx: 8
+[0m
