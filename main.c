@@ -406,8 +406,9 @@ void mtrx_clear(struct Matrix * mtrx) {
 
 int main() {
     /* int argc, char *argv[] */
+    int * arr;
     struct Matrix mtrx = mtrx_alloc("matrix.txt", 0);
-    
+
     /*green_color();
     printf("(1, 5) => %d, p: %p\n", mtrx_get_element(&mtrx, 1, 5)->value, (void *)mtrx_get_element(&mtrx, 1, 5));
     printf("(3, 1) => %d, p: %p\n", mtrx_get_element(&mtrx, 3, 1)->value, (void *)mtrx_get_element(&mtrx, 3, 1));
@@ -425,10 +426,16 @@ int main() {
 
     mtrx_print(&mtrx);
     
-    /*blue_color();     
+    blue_color();
+    arr = malloc(sizeof(int) * 4);
+    arr[0] = 1;     
+    arr[1] = 1;     
+    arr[2] = 1;     
+    arr[3] = 1;     
     printf("Size of simpler mtrx: %ld\n", sizeof(arr));
-    reset_color();*/
-    
+    reset_color();
+    free(arr);
+
     /* Clear Mtrx contents */
     mtrx_clear(&mtrx);
     
