@@ -95,7 +95,7 @@ When it comes to compression rates let's test the program out on the following d
 
 `main.c` would then output the following snippet:
 
-```shell
+```bash
 index: 1
 val: 1
 val: 1
@@ -124,4 +124,13 @@ Size of simpler mtrx: 8
 
 As we can see from the displayed sizes of the sparse matrix and just a normal array the array is uses `16 bytes` and the sparse matrix utilizes `96 bytes`. You might immediately mention that the sparse matrix data structure is not efficient with this example and you'd be definitely right. Let's however take another example into consideration. Below is practically the same data table but skewed to the right:
 
+ 0 | 0 | 1 | 1 |
+---|---|---|---|
+ 0 | 0 | 1 | 1 |
 
+In this case we get the following sizes. As you can see the sparse matrix remains unscaved in its size, however, the array only increments with every new number. 
+
+```bash
+Size of sparse mtrx: 96
+Size of simpler mtrx: 32
+```
