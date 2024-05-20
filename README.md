@@ -87,4 +87,34 @@ This is a visual representation of how our data structure would ultimately look 
 
 ## Compression Rates and Analysis
 
-When it comes to compression rates and  
+When it comes to compression rates and let's test the program out on the following data:
+
+ 1 | 1 |
+---|---|
+ 1 | 1 |
+
+`main.c` would then output the following:
+
+```shell
+index: 1
+val: 1
+val: 1
+
+index: 2
+val: 1
+val: 1
+
+==========================
+
+index: 1
+val: 1
+val: 1
+
+index: 2
+val: 1
+val: 1
+
+
+Size of sparse mtrx: 96
+Size of simpler mtrx: 8
+```
