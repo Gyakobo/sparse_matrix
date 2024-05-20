@@ -128,7 +128,7 @@ As we can see from the displayed sizes of the sparse matrix and just a normal ar
 ---|---|---|---|
  0 | 0 | 1 | 1 |
 
-In this case we get the following sizes. As you can see the sparse matrix remains unscaved in its size `96 bytes`, however, the array only increments with every new number. Current array size: `32 bytes`. 
+In this case we get the following sizes. As you can see the sparse matrix remains unscaved in its size `96 bytes`, however, the array only increments with every new number. Current array size: `32 bytes`. Such behaviour would be encountered repeatedly until the size of the said examined data structure would surpass the array itself.
 
 ```bash
 Size of sparse mtrx: 96
