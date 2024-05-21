@@ -39,7 +39,7 @@ struct Element {
     struct Element * colElement; // Pointer to next column Element
 };
 ```
-2. Afterwards, after the `struct Element` object is created, alongside it two more objects are created as well. Here this is where we'd have to utilize pointers and a little bit of our imagination. Using `void* malloc` we allocate space for (basically create) two `struct Header` structs, each of which would be pointing to both the aforementioned created element and the next `struct Header` element. If you haven't noticed already we're creating a table of sorts with specific column and row objects pointing to said element objects. The `struct Header` objects would also connect to each other using once again pointers `struct Header * header;`
+2. Afterwards, after the `struct Element` object is created, alongside it two more concomitant objects are created as well. Here this is where we'd have to utilize pointers and a little bit of our imagination. Using `void* malloc` we allocate space for (basically create) two `struct Header` structs, each of which would be pointing to both the aforementioned created element and the next `struct Header` element. If you haven't noticed already we're creating a table of sorts with specific column and row objects pointing to said element objects. The `struct Header` objects would also connect to each other using once again pointers `struct Header * header;`
 
 ```c
 struct Header {
