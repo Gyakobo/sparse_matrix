@@ -1,4 +1,4 @@
-# Using a Sparse Matrix for data compression
+# Using a Sparse Matrix for lossless data compression
 
 Author: [Andrew Gyakobo](https://github.com/Gyakobo)
 
