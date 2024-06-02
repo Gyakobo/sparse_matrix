@@ -141,3 +141,6 @@ Size of simpler mtrx: 32
 ```
 
 Such behaviour would be encountered repeatedly until the size of the said examined data structure would surpass the array itself.
+
+## License
+MIT
