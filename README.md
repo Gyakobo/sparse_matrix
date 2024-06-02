@@ -142,5 +142,16 @@ Size of simpler mtrx: 32
 
 Such behaviour would be encountered repeatedly until the size of the said examined data structure would surpass the array itself.
 
+Here are a list of examples proving the previous point:
+
+ 0 | 0 | 0 | 0 | 1 | 1 |
+---|---|---|---|---|---|
+ 0 | 0 | 0 | 0 | 1 | 1 |
+
+```bash
+Size of sparse mtrx: 96
+Size of simpler mtrx: 48
+```
+
 ## License
 MIT
