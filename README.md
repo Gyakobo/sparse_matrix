@@ -153,5 +153,14 @@ Size of sparse mtrx: 96
 Size of simpler mtrx: 48
 ```
 
+ 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
+---|---|---|---|---|---|---|---|
+ 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
+
+```bash
+Size of sparse mtrx: 96
+Size of simpler mtrx: 64
+```
+
 ## License
 MIT
